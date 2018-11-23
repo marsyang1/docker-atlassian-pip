@@ -1,10 +1,10 @@
 FROM atlassian/default-image:latest
-RUN apt-get update \
+RUN apt-add-repository ppa:ansible/ansible -y  \
+    && apt-get update \
     && apt-get install -y \
        python-pip \
        software-properties-common \
-    && apt-add-repository ppa:ansible/ansible -y \
-    && apt-get update && sudo apt-get install ansible \
+       ansible \
     && rm -rf /var/lib/apt/lists/*
   
 # Default to UTF-8 file.encoding
