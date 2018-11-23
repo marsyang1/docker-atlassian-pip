@@ -1,5 +1,5 @@
 FROM atlassian/default-image:latest
-RUN RUN apt-get update \
+RUN apt-get update \
     && apt-get install -y \
        python-pip \
     && rm -rf /var/lib/apt/lists/*
