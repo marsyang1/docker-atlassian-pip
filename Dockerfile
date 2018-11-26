@@ -2,6 +2,7 @@ FROM atlassian/default-image:latest
 RUN apt-add-repository ppa:ansible/ansible -y  \
     && apt-get update \
     && apt-get install -y \
+       vim \
        python-pip \
        software-properties-common \
        ansible \
