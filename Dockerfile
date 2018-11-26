@@ -9,6 +9,7 @@ RUN apt-add-repository ppa:ansible/ansible -y  \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install apache-libcloud boto \
        backports.ssl_match_hostname \
+       docker-py \
        google-api-python-client google-auth google-auth-httplib2 \
     && pip install --upgrade requests
 
