@@ -8,7 +8,8 @@ RUN apt-add-repository ppa:ansible/ansible -y  \
        ansible \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install apache-libcloud boto \
-       google-api-python-client google-auth google-auth-httplib2 \\
+       backports.ssl_match_hostname \
+       google-api-python-client google-auth google-auth-httplib2 \
     && pip install --upgrade requests
 
 # Default to UTF-8 file.encoding
